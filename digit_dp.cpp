@@ -3,9 +3,11 @@
 #include<string.h>
 #include<iostream>
 using namespace std;
+
 int len;
 string a;
 long long dp[1001][2][1001];
+
 long long solve(int i,int flag,int sum){
     //printf("%d %d %d\n",i,flag,sum);
     if(sum<0) return 0;
@@ -21,6 +23,7 @@ long long solve(int i,int flag,int sum){
     }
     return dp[i][flag][sum]=ans;
 }
+
 int main(){
     int sum;
     long long ans=0;
